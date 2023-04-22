@@ -8,11 +8,11 @@
  import React from 'react';
  import {Text, View, StyleSheet} from 'react-native';
  
- const YourApp = () => {
-   return (/*
+ const YourApp = () => { 
+   return (
      <View style={styles.general}>
       <Text style={styles.baseText}>Hello World</Text> 
-     </View>*/
+     </View>
    );
  };
 
