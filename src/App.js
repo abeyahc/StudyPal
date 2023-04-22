@@ -36,6 +36,7 @@ function App() {
       <input
         value={search}
         onChange={e => setSearch(e.target.value)}
+        placeholder='Search'
       />
         {data?.study_group?.map(studyGroup => (
           <>
