@@ -4,7 +4,7 @@ import './App.css';
 import "./styles.css"
 
 import { useQuery, gql } from '@apollo/client';
-import { useState } from 'react';
+import { Component, useState } from 'react';
 
 import React from 'react';
 import Navbar from "./Navbar"
