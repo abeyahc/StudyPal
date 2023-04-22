@@ -9,10 +9,10 @@
  import {Text, View, StyleSheet} from 'react-native';
  
  const YourApp = () => {
-   return (
+   return (/*
      <View style={styles.general}>
-       <Text style={styles.baseText}>Hello World</Text>
-     </View>
+      <Text style={styles.baseText}>Hello World</Text> 
+     </View>*/
    );
  };
 
