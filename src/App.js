@@ -2,10 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 
 import { useQuery, gql } from '@apollo/client';
+import { useState } from 'react';
 
 const GET_STUDY_GROUPS = gql`
- {
-  study_group {
+ query GetStudyGroups($searchText: String!) {
+  study_group(where: {class: {_ilike: $searchText}}) {
     id
     class
     students_in_groups {
@@ -19,15 +20,33 @@ const GET_STUDY_GROUPS = gql`
 `;
 
 function App() {
-  const { loading, error, data } = useQuery(GET_STUDY_GROUPS);
+  const [search, setSearch] = useState('')
+
+  const { loading, error, data } = useQuery(
+    GET_STUDY_GROUPS,
+    {
+      variables: {
+        searchText: `%${search}%`
+      }
+    }
+  );
 
   return (
     <div className="App">
-      <ul>
-        {data?.study_group?.at(0)?.students_in_groups?.map(
-          s => (<li>{s.student.name}</li>)
-        )}
-      </ul>
+      <input
+        value={search}
+        onChange={e => setSearch(e.target.value)}
+      />
+        {data?.study_group?.map(studyGroup => (
+          <>
+            <h2>{studyGroup.class}</h2>
+            <ul>
+            {studyGroup?.students_in_groups?.map(
+              s => (<li>{s.student.name}</li>)
+              )}
+            </ul>
+          </>
+        ))}
     </div>
   );
 }
