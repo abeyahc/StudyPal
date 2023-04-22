@@ -1,23 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
 
+import { useQuery, gql } from '@apollo/client';
+
+const GET_STUDY_GROUPS = gql`
+ {
+  study_group {
+    id
+    class
+    students_in_groups {
+      student {
+        name
+        major
+      }
+    }
+  }
+}
+`;
+
 function App() {
+  const { loading, error, data } = useQuery(GET_STUDY_GROUPS);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+        {data?.study_group?.at(0)?.students_in_groups?.map(
+          s => (<li>{s.student.name}</li>)
+        )}
+      </ul>
     </div>
   );
 }
