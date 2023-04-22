@@ -20,7 +20,6 @@
     general: {
       flex: 1,
       alignItems: 'center',
-      justifyContent: 'center',
     },
     baseText: {
       fontSize: 25, 
