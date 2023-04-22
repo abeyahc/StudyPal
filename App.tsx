@@ -11,7 +11,7 @@
  const YourApp = () => {
    return (
      <View style={styles.general}>
-       <Text style={styles.baseText}>Hello World</Text>
+        <Text style={styles.baseText}>Hello World</Text>
      </View>
    );
  };
