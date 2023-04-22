@@ -1,8 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 
+import "./styles.css"
+
 import { useQuery, gql } from '@apollo/client';
 import { useState } from 'react';
+
+import React from 'react';
+import Navbar from "./Navbar"
+import Home from "./pages/Home"
+import About from "./pages/About"
+
 
 const GET_STUDY_GROUPS = gql`
  query GetStudyGroups($searchText: String!) {
@@ -32,10 +40,19 @@ function App() {
   );
 
   return (
+    // navbar
     <div className="App">
+       <>
+        <Navbar />
+       </>
+
+
+
+      
       <input
         value={search}
-        onChange={e => setSearch(e.target.value)}
+        onChange={e => setSearch(e.target.value)} 
+        placeholder="Search"
       />
         {data?.study_group?.map(studyGroup => (
           <>
@@ -47,6 +64,7 @@ function App() {
             </ul>
           </>
         ))}
+        <p> here are all the classes with students </p>
     </div>
   );
 }
