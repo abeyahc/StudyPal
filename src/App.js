@@ -47,6 +47,7 @@ function App() {
             </ul>
           </>
         ))}
+        <p> here are all the classes with students </p>
     </div>
   );
 }
