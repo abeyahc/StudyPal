@@ -1,4 +1,6 @@
 import { Link, useMatch, useResolvedPath} from "react-router-dom"
+import './pages/About';
+import './pages/Account';
 export default function Navbar(){
     return (
     <nav className="nav">
@@ -6,7 +8,9 @@ export default function Navbar(){
             StudyPals
         </Link>
         <ul>
+            <CustomLink to="/" className="stroke">Home</CustomLink>
             <CustomLink to="./pages/About" className="stroke">About</CustomLink>
+            <CustomLink to="./pages/Account" className="stroke">Account</CustomLink>
         </ul>
     </nav>
     )
@@ -20,7 +24,6 @@ function CustomLink({ to, children, ...props }) {
             <Link to={to} {...props}>
                 {children}
             </Link>
-            <a to={to}>{children}</a>
         </li>
     )
 }

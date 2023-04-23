@@ -1,0 +1,32 @@
+h1 {
+    text-align: left;
+    color: #1f3255;
+}
+
+h2 {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    padding-left: 2rem;
+    padding-right: 3rem;
+}
+
+.boxName {
+    border-radius: 25px;
+    background-color: #D7E5FF;
+    padding: 2rem;
+    width: 100%;
+    margin: auto;
+    box-shadow: 10px 10px #4c6795; 
+    vertical-align: middle;
+    position: relative;
+    padding: 1.2rem;
+    width: 33rem;
+    margin: auto;
+}
+
