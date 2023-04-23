@@ -9,7 +9,6 @@ import { Route, Routes } from 'react-router-dom';
 
 import React from 'react';
 import Navbar from "./Navbar"
-import Home from "./pages/Home"
 import About from "./pages/About"
 
 
@@ -53,7 +52,7 @@ function App() {
       </div>
        </> 
       
-      <input
+      <input class="MainSearch"
         value={search}
         onChange={e => setSearch(e.target.value)} 
         placeholder="Search"
