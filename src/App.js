@@ -4,7 +4,8 @@ import './App.css';
 import "./styles.css"
 
 import { useQuery, gql } from '@apollo/client';
-import { useState } from 'react';
+import { Component, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
 import React from 'react';
 import Navbar from "./Navbar"
@@ -27,8 +28,8 @@ const GET_STUDY_GROUPS = gql`
 `;
 
 function App() {
+  
   const [search, setSearch] = useState('')
-
   const { loading, error, data } = useQuery(
     GET_STUDY_GROUPS,
     {
@@ -43,10 +44,13 @@ function App() {
     <div className="App">
        <>
         <Navbar />
-       </>
-
-
-
+        <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+       </> 
       
       <input class="MainSearch"
         value={search}
@@ -67,5 +71,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
