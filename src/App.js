@@ -1,13 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-
 import "./styles.css"
 
 import React from 'react';
-import Navbar from "./Navbar"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import { Route, Routes, } from "react-router-dom"    
+import Navbar from "./Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import { Route, Routes, } from "react-router-dom";    
 
 function App() {
   return (
@@ -17,7 +16,7 @@ function App() {
         <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="./pages/About" element={<About />} />
           </Routes>
       </>
     </div>
