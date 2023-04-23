@@ -25,7 +25,7 @@ body {
     margin: 0;
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
 
 }
 
@@ -39,10 +39,12 @@ body {
 }
 
 .nav li.active {
+    border-radius: 25;
     background-color: rgb(225, 217, 217);
 }
 
 .nav li:hover {
+    border-radius: 25;
     background-color: rgb(209, 214, 232);
 }
 

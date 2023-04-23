@@ -10,6 +10,7 @@ import React from 'react';
 import Navbar from "./Navbar"
 import Home from "./pages/Home"
 import About from "./pages/About"
+import { Route, Routes, } from "react-router-dom"
 
 
 const GET_STUDY_GROUPS = gql`
@@ -39,14 +40,18 @@ function App() {
     }
   );
 
+  
+  
   return (
     // navbar
     <div className="App">
-       <>
+      <>
         <Navbar />
-       </>
-
-
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+      </>
 
       
       <input
