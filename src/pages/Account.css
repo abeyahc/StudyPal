@@ -1,0 +1,38 @@
+.account {
+    text-align: center;
+    justify-content: center;
+}
+
+.accountList    {
+    border-radius: 25px;
+    background-color: #D7E5FF;
+    padding: 1.2rem;
+    width: 25rem;
+    margin: auto;
+    box-shadow: 10px 10px #4c6795; 
+
+}
+
+.accountInput {
+    text-align: left;
+    padding: 1rem;
+    color: #23092a;
+    border: 1px solid #e0d4e3;
+    width: 15rem;
+    height: 3rem;
+    border-radius: 25rem;
+    margin: 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    font-size: 20px;
+}
+
+input[type=email]:focus {
+    border: 5px solid #ffffff;
+    outline: none
+}
+input[type=email]:focus {
+    border: 5px solid #ffffff;
+    outline: none
+}
