@@ -6,16 +6,12 @@ export default function Navbar(){
             StudyPal
         </Link>
         <ul>
- AndrewNewBranch
-            <CustomLink to="/About">About</CustomLink>
-
             <li className="active">
                 <a href="/" ><b>Home</b></a>
             </li>
             <li>
                 <a href="./pages/About.js"><b>About</b></a>
             </li>
- main
         </ul>
     </nav>
     )
