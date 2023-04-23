@@ -1,7 +1,5 @@
-
 import { useQuery, gql } from '@apollo/client';
 import { useState } from 'react';
-
 import React from 'react';
 
 const GET_STUDY_GROUPS = gql`

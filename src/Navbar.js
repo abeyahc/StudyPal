@@ -6,7 +6,7 @@ export default function Navbar(){
             StudyPals
         </Link>
         <ul>
-            <CustomLink to="/about" className="stroke">About</CustomLink>
+            <CustomLink to="./pages/About" className="stroke">About</CustomLink>
         </ul>
     </nav>
     )
