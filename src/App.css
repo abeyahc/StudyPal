@@ -37,7 +37,10 @@
   }
 } */
 
-.Navname {
-  color: black;
-
+.MainSearch {
+  border-radius: 25px;
+  padding: 5px;
+  width: 150px;
+  border-color: 5291FF;
+  
 }

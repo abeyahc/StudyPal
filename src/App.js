@@ -8,7 +8,6 @@ import { useState } from 'react';
 
 import React from 'react';
 import Navbar from "./Navbar"
-import Home from "./pages/Home"
 import About from "./pages/About"
 
 
@@ -49,7 +48,7 @@ function App() {
 
 
       
-      <input
+      <input class="MainSearch"
         value={search}
         onChange={e => setSearch(e.target.value)} 
         placeholder="Search"

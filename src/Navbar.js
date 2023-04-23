@@ -3,10 +3,10 @@ export default function Navbar(){
         <a href="/" className="site-title">StudyPal</a>
         <ul>
             <li className="active">
-                <a href="/home">Home</a>
+                <a href="/" ><b>Home</b></a>
             </li>
             <li>
-                <a href="/about">About</a>
+                <a href="./pages/About.js"><b>About</b></a>
             </li>
         </ul>
     </nav>
